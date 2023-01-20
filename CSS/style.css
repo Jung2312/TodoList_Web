@@ -4,6 +4,7 @@ html, body {
     margin: auto;
     background-color: #27293B;
     overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #status{
@@ -60,38 +61,55 @@ html, body {
 }
 
 #todobtn{
-    margin: 40px 10px 0 40px;
+    margin: 40px 10px 0 10px;
 }
 
 #diarybtn{
-    margin: 60px 10px 0 40px;
+    margin: 60px 10px 0 10px;
 }
 
 #memobtn{
     
-    margin: 60px 10px 0 40px;
+    margin: 60px 10px 0 10px;
 }
 
-.circle{
-    margin: 40px auto;
-    width: 60%;
-    border-radius:50%;/*동그라미*/
-    border: 15px solid #61DAFB;
+#weather{
+    position: relative;
+    width: 12%;
+    height:40%;
 }
 
-.circle:before{
-    content:"";
-    display:block;
-    padding-top:100%;
-    }
+#weather-img{
+    position: absolute;
+    padding-left: 170%;
+    padding-top: 60%;
+    width: 400%;
+}
+
+#weather-temp{
+    position: absolute;
+    padding-left:540%;
+    padding-top: 200%;
+    font-size: 18px;
+    color: #2B2B2B;
+    font-weight: bolder;
+}
+
 
 .menubtn{
     background-color: transparent;
     border: none;
-    color: #61DAFB;
-    width: 20%;
+    color: #ffffff;
+    width: 92%;
+    height: 40px;
     cursor: pointer; 
     font-size: 14px;
+    text-align: left;
+    padding-left: 20%;
+}
+
+.menubtn:hover{
+    background-color: #8091B7;
 }
 
 .hidden{

@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>memory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script defer src="JS/userlogin.js"></script>
     <script defer src="JS/menu.js"></script>
+    <script type="module" defer src="JS/weather.js"></script>
     <link rel="stylesheet" href="CSS/style.css">
     
 </head>
@@ -32,8 +34,13 @@
         </div>
         
         <hr class="menuline">
-
-        <div class="circle"></div>
+        
+        <div id="weather">
+            <img id="weather-img">
+            <span id="weather-temp"></span>
+            <div class="circle"></div>
+        </div>
+        
     </div>
     
 
