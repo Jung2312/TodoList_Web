@@ -1,7 +1,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    margin: auto;
+    margin: 0;
     background-color: #515C76 ;
     overflow: hidden;
     font-family: 'Noto Sans KR', sans-serif;
@@ -34,7 +34,7 @@ html, body {
     float:left;
 }
 
-#inputname{
+#inputname, #todoinput{
     background-color: #27293B;
     color: #BCBCBC;
     border: none;
@@ -42,6 +42,13 @@ html, body {
     height: 18px;
     margin: 16px 0 0 0;
     float:left;
+}
+
+#todoinput{
+    background-color: #A4BBEE;
+    width: 30%;
+    margin: 16px 0 0 20%;
+    color: #1A1B27;
 }
 
 #loginbtn{
@@ -63,11 +70,43 @@ html, body {
     float:right;
 }
 
+#main{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
 #menu{
     background-color: #27293B;
     width: 20%;
     height: 100%;
-    margin-top: 50;
+    float: left;
+}
+
+#todo{
+    width: 80%;
+    float: right;
+    padding-top: 40px;
+}
+
+#todoplus{
+    background-color: transparent; /* 배경색 */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* 커서 위치시 커서 모양 변경 */
+    height: 24px;
+    width: 24px;   
+    float:left;
+    padding: 0%;
+    margin-top: 15px;
+    margin-left: 8px;
+    text-align : center;
+}
+
+#todoplus:hover{
+    background-color: #1A1B27;
+    border-radius: 50%;
 }
 
 #todobtn{
@@ -105,6 +144,12 @@ html, body {
     font-weight: bolder;
 }
 
+#home{
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+
 
 .menubtn{
     background-color: transparent;
@@ -127,7 +172,7 @@ html, body {
 }
 
 .menuline{
-    margin-top: 60px;
-    width: 70%;
+    margin-top: 40px;
+    width: 90%;
     border: solid 1px #8091B7;
 }

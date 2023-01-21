@@ -24,26 +24,40 @@
         <div id="date"></div>
     </div>
 
-    <div id="menu" class="hidden">
-        <div>
-            <input id="todobtn" class="menubtn" type="button" value="TODO">
+    <div id="main">
+        <div id="menu" class="hidden">
+            <div>
+                <input id="todobtn" class="menubtn" type="button" value="TODO">
+            </div>
+            <div>
+                <input id="diarybtn" class="menubtn" type="button" value="DIARY">
+            </div>
+            <div>
+                <input id="memobtn" class="menubtn" type="button" value="MEMO">
+            </div>
+            
+            <hr class="menuline">
+            
+            <div id="weather">
+                <img id="weather-img">
+                <span id="weather-temp"></span>
+                <div class="circle"></div>
+            </div>
         </div>
-        <div>
-            <input id="diarybtn" class="menubtn" type="button" value="DIARY">
-        </div>
-        <div>
-            <input id="memobtn" class="menubtn" type="button" value="MEMO">
-        </div>
+
+        <div id="home">
+            <div id="todo" class="todolist">TODO</div>
+            <form id="todo_form">
+                <input id="todoinput" type="text" placeholder="할 일을 입력하세요." required />
+                <button id="todoplus" type="button"><img src="./img/plus.png" alt=""></button>
+            </form>
         
-        <hr class="menuline">
-        
-        <div id="weather">
-            <img id="weather-img">
-            <span id="weather-temp"></span>
-            <div class="circle"></div>
+            <ul id="todo_list">
+            </ul>
         </div>
-        
+
     </div>
+        
     
 
 </body>
