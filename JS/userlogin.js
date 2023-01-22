@@ -29,19 +29,12 @@ function onLoginsubmit(event) {
 }
 
 
-function onLoginclick()
-{
-    hidden();
-    usersave();
-}
-
-
 const savedusername = localStorage.getItem(USERNAME_KEY);
 
 if(savedusername === null)
 {
     loginform.addEventListener("submit", onLoginsubmit);
-    loginbtn.addEventListener("click", onLoginclick);
+    loginbtn.addEventListener("click", onLoginsubmit);
 }
 
 else
