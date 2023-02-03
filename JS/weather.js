@@ -11,7 +11,7 @@ function onGeoOK(position) {
       const weatherIconAdrs = `../img/${weatherIcon}.png`;
       const weatherIconImg = document.querySelector("#weather-img");
       const weather = document.querySelector("#weather-temp");
-      weather.innerText = `${data.main.temp}°C`;
+      weather.innerText = `${data.name}, ${data.main.temp}°C`;
       weatherIconImg.src = weatherIconAdrs;
     });
 }
