@@ -229,8 +229,45 @@ input[type="checkbox"]:checked::before {
 }
 
 #cover {
-  width: 30%;
-  height: 10%;
+  width: 28%;
+  height: 8%;
+  border-radius: 4px;
+}
+
+#prev {
+  background-image: url("../img/prev.png");
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-style: none;
+}
+
+#play {
+  background-image: url("../img/play.png");
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-style: none;
+}
+
+#next {
+  background-image: url("../img/next.png");
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-style: none;
+}
+
+#next:hover {
+  cursor: pointer;
+}
+
+#play:hover {
+  cursor: pointer;
+}
+
+#prev:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
@@ -307,6 +344,8 @@ input[type="checkbox"]:checked::before {
 
 #madeinfo {
   background-image: linear-gradient(to right, #a100ff, #7d70ff, #7ed8ff);
+  background-color: rgba(000, 000, 000, 0.3);
+  background-blend-mode: multiply;
   color: #ffffff;
   height: 32%;
   line-height: 40px;

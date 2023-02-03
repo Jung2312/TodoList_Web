@@ -8,18 +8,21 @@ const progressContainer = document.getElementById("progress-container");
 const imgCover = document.getElementById("cover");
 const title = document.getElementById("title");
 
-const songs = ["Earth-Appears", "Fairy-Meeting", "Ice-&-Fire"];
+const songs = [
+  "Siestita",
+  "Orbiting-Knowhere",
+  "Little-Fish",
+  "Joy-To-The-World",
+];
 
 let songIndex = 2;
-
-audio.volume = 1;
 
 loadSong(songs[songIndex]);
 
 function loadSong(song) {
   title.innerText = song;
   audio.src = `../music/${song}.mp3`;
-  imgCover.src = `../img/${song}.jpg`;
+  imgCover.src = `../img/${song}.png`;
 }
 
 function playMusic() {
@@ -52,7 +55,7 @@ function playPrevSong() {
 function playNextSong() {
   songIndex++;
 
-  if (songIndex > 2) {
+  if (songIndex > 3) {
     songIndex = 0;
   }
 
