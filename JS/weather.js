@@ -1,5 +1,7 @@
 import { API_KEY } from "./API_KEY.js";
 
+const weatherIconImg = document.querySelector("#weather-img");
+
 function onGeoOK(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
@@ -9,7 +11,7 @@ function onGeoOK(position) {
     .then((data) => {
       const weatherIcon = data.weather[0].icon;
       const weatherIconAdrs = `../img/${weatherIcon}.png`;
-      const weatherIconImg = document.querySelector("#weather-img");
+
       const weather = document.querySelector("#weather-temp");
       weather.innerText = `${data.name}, ${data.main.temp}°C`;
       weatherIconImg.src = weatherIconAdrs;
@@ -18,6 +20,7 @@ function onGeoOK(position) {
 
 function onGeoError() {
   alert("날씨를 찾을 수 없습니다.");
+  weatherIconImg.src = "../img/unknown.png";
 }
 
 // PC의 현재 위치 불러옴
