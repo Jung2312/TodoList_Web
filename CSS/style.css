@@ -40,7 +40,9 @@ a {
 }
 
 #inputname,
-#todoinput {
+#todoinput,
+#titleinput,
+#memoarea {
   padding-left: 14px;
   color: #bcbcbc;
   border-radius: 4px;
@@ -53,11 +55,23 @@ a {
   box-shadow: 0 3px 6px hsl(0 0% 0% / 20%);
 }
 
-#todoinput {
+#inputname {
+  width: 20%;
+}
+
+#todoinput,
+#titleinput,
+#memoarea {
   width: 60%;
   margin: 16px 0 0 20%;
-  color: #1a1b27;
   color: #000;
+}
+
+#memoarea {
+  height: 60%;
+  margin: 16px 0 0 20%;
+  color: #000;
+  resize: none;
 }
 
 #loginbtn {
@@ -97,14 +111,34 @@ a {
   box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
 }
 
-#todo {
+#booktitle {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  width: 100%;
+  line-height: 46px;
+  text-align: center;
+  margin: 0;
+}
+
+#todo,
+#memo {
   width: 80%;
   float: right;
   padding-top: 40px;
   margin-left: 20px;
 }
 
-#todoplus {
+#book {
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#todoplus,
+#savebtn,
+#searchbtn {
   background-color: transparent; /* 배경색 */
   border: none; /* assuming we don't want any borders */
   cursor: pointer; /* 커서 위치시 커서 모양 변경 */
@@ -117,7 +151,22 @@ a {
   text-align: center;
 }
 
+#savebtn {
+  height: 30px;
+  width: 30px;
+}
+
 #todoplus:hover {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+
+#savebtn:hover {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+
+#searchbtn:hover {
   background-color: #f5f5f5;
   border-radius: 50%;
 }
@@ -192,7 +241,7 @@ input[type="checkbox"]:checked::before {
   cursor: pointer;
 }
 
-#diarybtn {
+#memobtn {
   margin: 60px 10px 0 10px;
 }
 
@@ -201,7 +250,7 @@ input[type="checkbox"]:checked::before {
 }
 
 #todobtn,
-#diarybtn,
+#memobtn,
 #bookbtn {
   font-size: 16px;
   font-weight: bolder;
@@ -226,6 +275,26 @@ input[type="checkbox"]:checked::before {
   padding-top: 200%;
   font-size: 12px;
   font-weight: bolder;
+}
+
+#book-img {
+  width: 20%;
+  border-radius: 4px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#bookContainer {
+  text-align: center;
+}
+
+#titleContainer {
+  width: 100%;
+  height: 10%;
+}
+
+#bookauthor {
+  text-align: center;
 }
 
 #cover {
@@ -270,60 +339,11 @@ input[type="checkbox"]:checked::before {
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  #weather-temp {
-    font-size: 8px;
-    padding-left: 10px;
-    padding-top: 40px;
-  }
-  #todobtn,
-  #diarybtn,
-  #bookbtn {
-    font-size: 10px;
-    margin: 0;
-  }
-  #date {
-    color: #000;
-    width: 100%;
-    height: 50px;
-    line-height: 40px;
-    text-align: right;
-    padding-right: 20px;
-  }
-}
-
-@media (max-height: 630px) {
-  #weather-temp {
-    font-size: 8px;
-    padding-left: 10px;
-    padding-top: 40px;
-  }
-  #todobtn,
-  #diarybtn,
-  #bookbtn {
-    font-size: 10px;
-    margin: 0;
-  }
-  #date {
-    color: #000;
-    width: 100%;
-    height: 50px;
-    line-height: 40px;
-    text-align: right;
-    padding-right: 20px;
-  }
-}
-
-@media (max-width: 1200px) {
-  #madeinfo,
-  #musicbox {
-    display: none;
-  }
-}
-
 #musicbox,
+#madeinfo,
 #todohome,
-#madeinfo {
+#memohome,
+#bookhome {
   box-shadow: 0 3px 6px hsl(0 0% 0% / 20%);
   width: 40%;
   height: 80%;
@@ -340,6 +360,81 @@ input[type="checkbox"]:checked::before {
   margin-left: 40px;
   text-align: center;
   padding-top: 20px;
+}
+
+@media (max-width: 600px) {
+  #weather-temp {
+    font-size: 8px;
+    padding-left: 10px;
+    padding-top: 40px;
+  }
+  #todobtn,
+  #memobtn,
+  #bookbtn {
+    font-size: 10px;
+    margin: 0;
+  }
+  #date {
+    color: #000;
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 20px;
+  }
+  #titleinput,
+  #todoinput {
+    width: 40%;
+  }
+}
+
+@media (max-height: 630px) {
+  #weather-temp {
+    font-size: 8px;
+    padding-left: 10px;
+    padding-top: 40px;
+  }
+  #todobtn,
+  #memobtn,
+  #bookbtn {
+    font-size: 10px;
+    margin: 0;
+  }
+  #date {
+    color: #000;
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 20px;
+  }
+  #todohome,
+  #memohome,
+  #bookhome {
+    height: 440px;
+  }
+  #menu {
+    height: 440px;
+  }
+  #cover {
+    width: 10%;
+    height: 10%;
+  }
+  #musicbox,
+  #madeinfo {
+    width: 30%;
+    height: 30%;
+    margin-left: 40px;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #madeinfo,
+  #musicbox {
+    display: none;
+  }
 }
 
 #madeinfo {

@@ -1,3 +1,4 @@
+import menuRoad from "./menuload.js";
 const todohome = document.querySelector("#todohome");
 const todoForm = document.querySelector("#todo_form");
 const todoList = document.querySelector("#todo_list");
@@ -7,10 +8,11 @@ const todobtn = document.querySelector("#todobtn");
 
 let todo = [];
 
-let check = [];
-
 function onclicktodo() {
   const clickClass = "hidden";
+  const memohome = "memohome";
+  const bookhome = "bookhome";
+  menuRoad(clickClass, memohome, bookhome);
   todohome.classList.remove(clickClass); // 클래스가 존재하면 제거, 존재하지 않으면 추가
   // 다른 메뉴 클릭시 클래스 추가
 }
