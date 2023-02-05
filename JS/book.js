@@ -1,4 +1,4 @@
-import { book_KEY } from "./API_KEY.js";
+import { book_KEY } from "./book_KEY.js";
 import menuRoad from "./menuload.js";
 
 const bookhome = document.querySelector("#bookhome");
@@ -25,7 +25,7 @@ function onbookSearch(event) {
   event.preventDefault();
   const Apiurl = `https://dapi.kakao.com/v3/search/book?target=title`;
   const bookName = bookInput.value;
-
+  bookInput.value = "";
   $.ajax({
     //코드 상단 : 요청에 대한 정보
     method: "GET", // 전송 방식
@@ -41,7 +41,6 @@ function onbookSearch(event) {
     booktitle.innerText = title;
     bookauthor.innerText = authors;
     bookImg.src = img;
-    console.log(title);
   });
 }
 

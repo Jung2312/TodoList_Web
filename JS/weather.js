@@ -1,4 +1,4 @@
-import { weather_KEY } from "./API_KEY.js";
+import { weather_KEY } from "./weather_KEY.js";
 
 const weatherIconImg = document.querySelector("#weather-img");
 
