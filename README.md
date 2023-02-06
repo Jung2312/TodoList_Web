@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/97083703/216984771-89f615ef-dd6a-49ea-aae2-a1e213e4a17c.png)
 ![image](https://user-images.githubusercontent.com/97083703/216985326-0e9a3fc7-859b-494b-bd8d-0b5d25cd64bd.png)
-![image](https://user-images.githubusercontent.com/97083703/216985645-afced8a2-2ba9-411c-b7ea-3369a49c2f32.png)
+![image](https://user-images.githubusercontent.com/97083703/216986037-906c0942-e872-46f9-b100-0bcdc3c40f7c.png)
 
 <주요 기능>
 
